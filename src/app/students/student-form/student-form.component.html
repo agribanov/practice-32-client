@@ -1,3 +1,27 @@
-<p>
-  student-form works!
-</p>
+<form>
+  <mat-card class="student-form">
+    <mat-card-header>
+      <mat-card-title><h2>Edit Student</h2></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Surname">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="phone" matInput placeholder="Phone">
+      </mat-form-field>
+      <mat-form-field>
+        <input type="email" matInput placeholder="Email">
+      </mat-form-field>
+      <mat-checkbox formControlName="isActive">Active</mat-checkbox>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary">Save</button>
+      <button mat-button>Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
