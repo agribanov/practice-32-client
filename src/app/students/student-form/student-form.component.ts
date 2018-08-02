@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Student } from '../models/Student';
 
 @Component({
   selector: 'app-student-form',
   templateUrl: './student-form.component.html',
   styleUrls: ['./student-form.component.css']
 })
-export class StudentFormComponent implements OnInit {
+export class StudentFormComponent {
+  @Input() student: Student
+  @Input('title') formTitle: string
+  @Output() save = new EventEmitter<Student>()
+  @Output() cancel = new EventEmitter<void>()
 
-  constructor() { }
+  onFormSubmit(){
+    this.save.emit(this.student);
+  }
 
-  ngOnInit() {
+  onFormCancel(){
+    this.cancel.emit(null);
   }
 
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
@@ -18,6 +19,7 @@ import { StudentsNavigationComponent } from './students-navigation/students-navi
   imports: [
     CommonModule,
     StudentsRoutingModule,
+    FormsModule,
     MatTableModule,
     MatCardModule,
     MatButtonModule,

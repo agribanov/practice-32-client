@@ -1,1 +1,7 @@
-<app-student-form></app-student-form>
+<app-student-form 
+    [title]="'Edit Student'"
+    [student]="item$ | async"
+    (save)="onFormSave($event)"
+    (cancel)="onFormCancel()"
+>
+</app-student-form>
